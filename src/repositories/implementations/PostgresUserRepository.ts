@@ -1,4 +1,4 @@
-import { User } from "../../entities/User";
+import { User } from "@entities/User";
 import { IUsersRepository } from "../IUsersRepository";
 
 export class PostgresUserRepository implements IUsersRepository {
