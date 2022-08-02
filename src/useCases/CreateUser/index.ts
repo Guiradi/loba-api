@@ -1,18 +1,18 @@
-import { MailTrapMailProvider } from "@providers/implementations/MailTrapMailProvider";
-import { PostgresUserRepository } from "@repositories/implementations/PostgresUserRepository";
-import { CreateUserController } from "./CreateUserController";
-import { CreateUserUseCase } from "./CreateUserUseCase";
+import { MailTrapMailProvider } from '@providers/implementations/MailTrapMailProvider'
+import { PostgresUserRepository } from '@repositories/implementations/PostgresUserRepository'
+import { CreateUserController } from './CreateUserController'
+import { CreateUserUseCase } from './CreateUserUseCase'
 
-const mailTrapMailProvider = new MailTrapMailProvider();
-const postgresUsersRepository = new PostgresUserRepository();
+const mailTrapMailProvider = new MailTrapMailProvider()
+const postgresUsersRepository = new PostgresUserRepository()
 
 const createUserUseCase = new CreateUserUseCase(
-    postgresUsersRepository,
-    mailTrapMailProvider
-);
+  postgresUsersRepository,
+  mailTrapMailProvider
+)
 
 const createUserController = new CreateUserController(
-    createUserUseCase
-);
+  createUserUseCase
+)
 
-export { createUserUseCase, createUserController };
+export { createUserUseCase, createUserController }
