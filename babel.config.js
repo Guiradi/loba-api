@@ -13,13 +13,12 @@ module.exports = {
   plugins: [
     ['module-resolver', {
       alias: {
-        '@entities': './src/domain/entities',
-        '@providers': './src/providers',
-        '@repositories': './src/domain/interfaces/repositories',
-        '@useCases': './src/useCases',
         '@config': './src/config',
-        '@dto': './src/domain/interfaces/useCases',
-        '@implementations': './src/domain/repositories',
+        '@providers': './src/providers',
+        '@entities': './src/domain/entities',
+        '@useCases': './src/domain/useCases',
+        '@repositories': './src/domain/repositories',
+        '@interfaces': './src/domain/interfaces',
         '@routers': './src/presentation/routers'
       }
     }]

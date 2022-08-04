@@ -1,6 +1,6 @@
-import { app } from './app'
-const port = 3333
+import express from 'express'
 
-app.listen(port, () => {
-  console.log(`Server running on ${port}`)
-})
+const server = express()
+server.use(express.json())
+
+export { server }

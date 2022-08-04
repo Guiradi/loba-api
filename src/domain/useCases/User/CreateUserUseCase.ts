@@ -1,15 +1,16 @@
 import { User } from '@entities/User'
-import { IMailProvider } from '@providers/IMailProvider'
-import { IUsersRepository } from '@repositories/IUsersRepository'
-import { ICreateUserRequestDTO } from '@dto/User/CreateUserDTO'
+import { IMailProvider } from '@providers/interfaces/IMailProvider'
+import { ICreateUserRequestDTO } from '@entities/User/CreateUserDTO'
+import { IUsersRepository } from '@interfaces/repositories/IUsersRepository'
+import { ICreateUserUseCase } from '@interfaces/useCases/User/ICreateUserUseCase'
 
-export class CreateUserUseCase {
+export class CreateUser implements ICreateUserUseCase {
   constructor (
         private usersRepository: IUsersRepository,
-        private mailProvider: IMailProvider
+    private mailProvider: IMailProvider
   ) {}
 
-  async execute (data: ICreateUserRequestDTO) {
+  async execute (data: ICreateUserRequestDTO): Promise<void> {
     const userAlreadyExists = await this.usersRepository.findByEmail(data.email)
 
     if (userAlreadyExists) {
