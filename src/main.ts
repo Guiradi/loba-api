@@ -5,15 +5,13 @@
 import { MailTrapMailProvider } from '@providers/implementations/MailTrapMailProvider'
 import { UserRouter } from '@routers/UserRouter'
 import { CreateUser } from '@useCases/User/CreateUserUseCase'
-import { PostgresUserDataSource } from './data/dataSources/Postgres/PostgresUserDataSource'
+import { PrismaUserDataSource } from './data/infra/prisma/PrismaUserDatasource'
 import { server } from './server'
 
 (async () => {
-  // escolher data source
-  // const dataSource = x
   const userMiddleware = UserRouter(
     new CreateUser(
-      new PostgresUserDataSource(),
+      new PrismaUserDataSource(),
       new MailTrapMailProvider()
     )
   )

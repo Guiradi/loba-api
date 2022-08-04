@@ -9,7 +9,9 @@
     "lint": "eslint . --ext .ts",
     "test": "jest",
     "build": "babel src --extensions \".js,.ts\" --out-dir dist --copy-files --no-copy-ignored",
-    "start": "node dist/main.js"
+    "start": "node dist/main.js",
+    "make:migration": "prisma migrate dev --name",
+    "generate": "prisma generate"
   },
   "dependencies": {
     "@prisma/client": "^4.1.1",

@@ -1,6 +1,5 @@
-import { User } from '@entities/User'
+import { User, ICreateUserRequestDTO } from '@entities/User'
 import { IMailProvider } from '@providers/interfaces/IMailProvider'
-import { ICreateUserRequestDTO } from '@entities/User/CreateUserDTO'
 import { IUsersRepository } from '@interfaces/repositories/IUsersRepository'
 import { ICreateUserUseCase } from '@interfaces/useCases/User/ICreateUserUseCase'
 

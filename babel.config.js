@@ -13,6 +13,7 @@ module.exports = {
   plugins: [
     ['module-resolver', {
       alias: {
+        '@infra': './src/infra',
         '@config': './src/config',
         '@providers': './src/providers',
         '@entities': './src/domain/entities',

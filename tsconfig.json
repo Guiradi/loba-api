@@ -8,6 +8,7 @@
     "rootDir": "./src", 
     "baseUrl": ".",
     "paths": {
+      "@infra/*": ["./src/infra/*"],
       "@config/*": ["./src/config/*"],
       "@providers/*": ["./src/providers/*"],
       "@entities/*": ["./src/domain/entities/*"],
@@ -16,10 +17,12 @@
       "@interfaces/*": ["./src/domain/interfaces/*"],
       "@routers/*": ["./src/presentation/routers/*"]
     },
-    "typeRoots": [
-      "./node_modules/@types",
-      "./src/@types"
-    ],
+    // "typeRoots": [
+    //   "./node_modules/@types",
+    //   "./node_modules/.prisma/client",
+    //   "./node_modules/@prisma",
+    //   "./src/@types"
+    // ],
     "resolveJsonModule": true,
     "allowJs": true,
     "outDir": "./dist",
