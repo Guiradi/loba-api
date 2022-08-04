@@ -8,11 +8,14 @@
     "rootDir": "./src", 
     "baseUrl": ".",
     "paths": {
-      "@entities/*": ["./src/entities/*"],
+      "@entities/*": ["./src/domain/entities/*"],
       "@providers/*": ["./src/providers/*"],
-      "@repositories/*": ["./src/repositories/*"],
+      "@repositories/*": ["./src/domain/interfaces/repositories/*"],
       "@useCases/*": ["./src/useCases/*"],
-      "@config/*": ["./src/config/*"]
+      "@config/*": ["./src/config/*"],
+      "@dto/*": ["./src/domain/interfaces/useCases/*"],
+      "@implementations/*": ["./src/domain/repositories/*"],
+      "@routers/*": ["./src/presentation/routers/*"]
     },
     "typeRoots": [
       "./node_modules/@types",
