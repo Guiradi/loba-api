@@ -16,7 +16,7 @@ yarn dev
 
 ## TODO
 
- - [ ] Implementação do PRISMA
+ - [x] Implementação do PRISMA
  - [ ] Implementação da rota de login
  - [ ] Implementação da autenticação JWT
  - [ ] Implementação do ACL

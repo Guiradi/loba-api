@@ -1,18 +1,13 @@
-import { v4 as uuid } from 'uuid'
+import { BaseEntity } from './BaseEntity'
 
-export class User {
-  public readonly id: string
-
+export class User extends BaseEntity {
   public name: string
   public email: string
   public password: string
 
   constructor (props: Omit<User, 'id'>, id?: string) {
+    super(id)
     Object.assign(this, props)
-
-    if (!id) {
-      this.id = uuid()
-    }
   }
 }
 
