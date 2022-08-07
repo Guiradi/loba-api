@@ -15,4 +15,26 @@ model User {
   // role      Role     @default(USER)
   createdAt   DateTime  @default(now())
   updatedAt   DateTime  @updatedAt
+  permissions Permission[]
+  roles       Role[]
+}
+
+model Permission {
+  id            String    @id
+  name          String
+  description   String?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  users         User[]
+  roles         Role[]
+}
+
+model Role {
+  id            String    @id
+  name          String
+  description   String?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  users         User[]
+  permissions   Permission[]
 }
