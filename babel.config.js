@@ -13,14 +13,9 @@ module.exports = {
   plugins: [
     ['module-resolver', {
       alias: {
+        '@core': './src/core',
         '@infra': './src/infra',
-        '@config': './src/config',
-        '@providers': './src/providers',
-        '@entities': './src/domain/entities',
-        '@useCases': './src/domain/useCases',
-        '@repositories': './src/domain/repositories',
-        '@interfaces': './src/domain/interfaces',
-        '@routers': './src/presentation/routers'
+        '@config': './src/config'
       }
     }]
   ],
