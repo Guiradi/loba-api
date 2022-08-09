@@ -6,6 +6,7 @@ import { router } from './routes'
 import { server } from './server'
 
 (async () => {
+  const port = process.env.PORT
   server.use(router)
-  server.listen(3333, () => console.log('Server running on port 3333'))
+  server.listen(port, () => console.log(`Server running on port ${port}`))
 })()
