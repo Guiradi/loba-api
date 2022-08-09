@@ -1,6 +1,5 @@
 import { ILoginUserRequestDTO } from '@entities/User'
 import { IUsersRepository } from '@interfaces/repositories/IUsersRepository'
-import { compare } from 'bcryptjs'
 import { sign } from 'jsonwebtoken'
 
 export class LoginUseCase {
@@ -15,7 +14,7 @@ export class LoginUseCase {
       throw new Error('User or password not found.')
     }
 
-    const passwordMatch = await compare(data.password, user.password)
+    const passwordMatch = await user.comparePassword(data.password)
 
     if (!passwordMatch) {
       throw new Error('User or password not found.')

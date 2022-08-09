@@ -1,5 +1,5 @@
-import { ICreateUserRequestDTO } from '@entities/User'
+import { IUserProps } from '@entities/User'
 
 export interface ICreateUserUseCase {
-    execute(data: ICreateUserRequestDTO): Promise<void>
+    execute(data: IUserProps): Promise<void>
 }

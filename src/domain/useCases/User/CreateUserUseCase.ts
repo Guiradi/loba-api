@@ -1,4 +1,4 @@
-import { User, ICreateUserRequestDTO } from '@entities/User'
+import { User, IUserProps } from '@entities/User'
 import { IMailProvider } from '@providers/interfaces/IMailProvider'
 import { IUsersRepository } from '@interfaces/repositories/IUsersRepository'
 import { ICreateUserUseCase } from '@interfaces/useCases/User/ICreateUserUseCase'
@@ -9,8 +9,8 @@ export class CreateUser implements ICreateUserUseCase {
     private mailProvider: IMailProvider
   ) {}
 
-  async execute (data: ICreateUserRequestDTO): Promise<void> {
-    const userAlreadyExists = await this.usersRepository.findByEmail(data.email)
+  async execute (data: IUserProps): Promise<void> {
+    const userAlreadyExists = await this.usersRepository.exists(data.email)
 
     if (userAlreadyExists) {
       throw new Error('User already exists.')
@@ -18,7 +18,7 @@ export class CreateUser implements ICreateUserUseCase {
 
     const user = new User(data)
 
-    await this.usersRepository.save(user)
+    await this.usersRepository.create(user)
 
     await this.mailProvider.sendMail({
       to: {
