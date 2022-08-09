@@ -11,6 +11,7 @@
       "@core/*": ["./src/core/*"],
       "@infra/*": ["./src/infra/*"],
       "@config/*": ["./src/config/*"],
+      "@providers/*": ["./src/providers/*"],
     },
     // "typeRoots": [
     //   "./node_modules/@types",

@@ -15,7 +15,8 @@ module.exports = {
       alias: {
         '@core': './src/core',
         '@infra': './src/infra',
-        '@config': './src/config'
+        '@config': './src/config',
+        '@providers': './src/providers'
       }
     }]
   ],
