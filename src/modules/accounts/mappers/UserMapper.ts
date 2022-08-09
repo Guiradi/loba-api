@@ -1,4 +1,4 @@
-import { User } from '@entities/User'
+import { User } from '../domain/user/user'
 import { User as PersistenceUser } from '@prisma/client'
 
 export class UserMapper {
