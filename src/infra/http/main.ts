@@ -1,5 +1,5 @@
 /**
- * Baseado na arquitetura: https://github.com/nanosoftonline/clean-architecture-express-contacts/
+ * Baseado na arquitetura: https://github.com/diego3g/umbriel/
  */
 
 import { router } from './routes'

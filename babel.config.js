@@ -16,7 +16,7 @@ module.exports = {
         '@core': './src/core',
         '@infra': './src/infra',
         '@config': './src/config',
-        '@providers': './src/providers'
+        '@providers': './src/infra/providers'
       }
     }]
   ],

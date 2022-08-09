@@ -1,5 +1,5 @@
 import { Either, left, right } from '@core/logic/Either'
-import { IMailProvider } from '@providers/interfaces/IMailProvider'
+import { IMailProvider } from '@providers/models/IMailProvider'
 import { User } from '../../domain/user/user'
 import { IUsersRepository } from '../../repositories/IUsersRepository'
 import { AccountAlreadyExistsError } from './errors/AccountAlreadyExistsError'
